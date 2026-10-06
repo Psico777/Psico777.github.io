@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yordy Rojas — AI Engineer</title>
+<meta name="description" content="Yordy Rojas: Ingeniero de Sistemas y AI Engineer en Lima. LLM propio (THORP-IA), automatización en producción con 274 clientes, investigación cuantitativa." />
+<link rel="icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0b0f14; --sup:#121922; --sup2:#18222d; --borde:#243140; --txt:#e8eef4; --muted:#9fb0c0; --verde:#18a463; --verde2:#3ddc97; --oro:#e9c46a; --r:16px; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f6f8f7; --sup:#ffffff; --sup2:#eef3f0; --borde:#d8e2dc; --txt:#10181f; --muted:#4f5f6c; --verde:#0e8a50; --verde2:#0e8a50; } }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.6 Archivo, system-ui, sans-serif; }
+  a { color: var(--verde2); text-decoration: none; } a:hover { text-decoration: underline; }
+  .env { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+  nav b { font-weight:800; letter-spacing:-.02em; } nav .links { display:flex; gap:18px; font-size:.92rem; flex-wrap: wrap; }
+  .hero { display:grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items:center; padding: 40px 0 56px; }
+  .ceja { font: 500 .78rem 'IBM Plex Mono', monospace; letter-spacing:.1em; text-transform:uppercase; color: var(--verde2); margin:0 0 10px; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height:1.02; margin: 0 0 16px; letter-spacing:-.035em; font-weight:800; }
+  h1 em { font-style: normal; color: var(--verde2); }
+  .sub { color: var(--muted); font-size: 1.1rem; max-width: 34rem; margin: 0 0 22px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn { display:inline-flex; gap:8px; align-items:center; padding:.75rem 1.1rem; border-radius: 12px; font-weight:600; background: var(--verde); color:#fff; }
+  .btn.sec { background: transparent; border:1px solid var(--borde); color: var(--txt); }
+  .btn:hover { text-decoration:none; filter: brightness(1.08); }
+  .thorpi { justify-self:center; position:relative; width:min(360px, 80vw); aspect-ratio:1; }
+  .thorpi::before { content:""; position:absolute; inset:8%; border-radius:50%; background: radial-gradient(circle, color-mix(in srgb, var(--verde) 28%, transparent), transparent 68%); }
+  .thorpi img { position:relative; width:100%; height:100%; object-fit:contain; }
+  .datos { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0 0 56px; }
+  .dato { background: var(--sup); border:1px solid var(--borde); border-radius: var(--r); padding: 16px; }
+  .dato b { display:block; font-size: 1.7rem; letter-spacing:-.02em; }
+  .dato span { color: var(--muted); font-size:.88rem; }
+  h2 { font-size: 1.9rem; letter-spacing:-.03em; margin: 0 0 18px; }
+  section { margin: 0 0 64px; }
+  .grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: var(--sup); border:1px solid var(--borde); border-radius: var(--r); padding: 20px; display:flex; flex-direction:column; gap:8px; }
+  .card h3 { margin:0; font-size: 1.15rem; }
+  .card p { margin:0; color: var(--muted); }
+  .card .tags { display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; padding-top:6px; }
+  .tag { font: 500 .72rem 'IBM Plex Mono', monospace; padding: .18rem .5rem; border-radius: 6px; background: var(--sup2); border:1px solid var(--borde); color: var(--muted); }
+  .card.dest { border-color: var(--verde); background: linear-gradient(160deg, color-mix(in srgb, var(--verde) 12%, var(--sup)), var(--sup) 60%); grid-column: span 2; }
+  .dest-in { display:grid; grid-template-columns: 1fr 300px; gap: 20px; align-items:center; }
+  .dest-in video { width:100%; border-radius: 12px; border:1px solid var(--borde); }
+  .tabla { width:100%; border-collapse: collapse; font-size:.92rem; margin-top: 6px; }
+  .tabla td { padding: 6px 4px; border-bottom: 1px solid var(--borde); } .tabla td:last-child { text-align:right; font-weight:600; color: var(--verde2); }
+  .acciones { display:grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .acciones figure { margin:0; text-align:center; background: var(--sup); border:1px solid var(--borde); border-radius: var(--r); padding: 10px; }
+  .acciones img { width:100%; aspect-ratio:1; object-fit:contain; }
+  .acciones figcaption { font-size:.8rem; color: var(--muted); }
+  .stack { display:flex; flex-wrap:wrap; gap:8px; }
+  footer { border-top:1px solid var(--borde); padding: 26px 0 40px; color: var(--muted); font-size:.9rem; display:flex; justify-content:space-between; gap: 12px; flex-wrap: wrap; }
+  @media (max-width: 820px) {
+    .hero, .dest-in { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } .card.dest { grid-column: auto; }
+    .datos { grid-template-columns: repeat(2, 1fr); } .acciones { grid-template-columns: repeat(3, 1fr); } nav .links { display:none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="env">
+  <nav><b>Yordy Rojas</b><div class="links"><a href="#proyectos">Proyectos</a><a href="#thorpi">Thorpi</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a></div></nav>
+
+  <header class="hero">
+    <div>
+      <p class="ceja">Ingeniero de Sistemas · AI Engineer · Lima, Perú</p>
+      <h1>Construyo sistemas que <em>corren en producción</em>, y entreno mi propio LLM.</h1>
+      <p class="sub">Automatización de punta a punta con clientes reales, investigación cuantitativa con rigor estadístico y THORP-IA: un modelo de lenguaje que entrené, evalué a ciegas y desplegué en GPU y en una laptop.</p>
+      <div class="btns">
+        <a class="btn" href="https://github.com/Psico777/thorp-ia-case-study">Ver THORP-IA →</a>
+        <a class="btn sec" href="https://github.com/Psico777">GitHub</a>
+        <a class="btn sec" href="https://linkedin.com/in/yordyrojasb/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="thorpi"><img src="assets/thorpi-saluda.webp" alt="Thorpi, la mascota 3D de THORP-IA, saludando" /></div>
+  </header>
+
+  <div class="datos">
+    <div class="dato"><b>274</b><span>clientes activos en ELEKA</span></div>
+    <div class="dato"><b>96 %</b><span>acierto de THORP-IA en examen ciego</span></div>
+    <div class="dato"><b>0 %</b><span>números inventados</span></div>
+    <div class="dato"><b>1 000+</b><span>variantes con corrección estadística</span></div>
+  </div>
+
+  <section id="proyectos">
+    <p class="ceja">Proyectos</p>
+    <h2>Todo resuelve un problema real</h2>
+    <div class="grid">
+      <article class="card dest">
+        <div class="dest-in">
+          <div>
+            <h3>THORP-IA — LLM propio</h3>
+            <p>Qwen3-8B + LoRA entrenado con 8 000+ ejemplos de mi investigación. Explica, avisa y escribe la bitácora de cada decisión; no decide. Servido con vLLM en GPU sin servidor y con Ollama en una laptop, con respuestas en vivo y RAG.</p>
+            <table class="tabla">
+              <tr><td>Decisiones correctas (907 preguntas nunca vistas)</td><td>96 %</td></tr>
+              <tr><td>Números inventados</td><td>0 %</td></tr>
+              <tr><td>Datos inventados vs. versión anterior</td><td>5 % vs 20 %</td></tr>
+            </table>
+            <div class="tags"><span class="tag">PyTorch</span><span class="tag">PEFT/LoRA</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">FastAPI</span></div>
+            <p style="margin-top:8px"><a href="https://github.com/Psico777/thorp-ia-case-study">Caso de estudio →</a></p>
+          </div>
+          <video src="assets/thorpi-presentacion.mp4" poster="assets/thorpi-reposo.webp" controls muted playsinline preload="none" aria-label="Video de presentación de Thorpi"></video>
+        </div>
+      </article>
+      <article class="card">
+        <h3>ELEKA — negocio automatizado</h3>
+        <p>Venta, cobro y entrega automatizados de punta a punta para 274 clientes activos en LATAM: CRM de WhatsApp, OCR de vouchers, agente en Raspberry Pi y app Android de alertas de pago.</p>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Selenium</span><span class="tag">GCP</span></div>
+      </article>
+      <article class="card">
+        <h3>ELEKA-TRADER — investigación cuantitativa</h3>
+        <p>Simulador al segundo calibrado contra operaciones reales (error ≈ $0,002 por operación), hipótesis pre-registradas, walk-forward, Monte Carlo y paper trading 24/7.</p>
+        <div class="tags"><span class="tag">Numba</span><span class="tag">LightGBM</span><span class="tag">Binance</span><span class="tag">Estadística</span></div>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Psico777/rag-demo">RAG Demo</a></h3>
+        <p>Preguntas sobre documentos propios con citas a la fuente: LangChain, Chroma, embeddings locales y cualquier LLM compatible con OpenAI u Ollama. Con pruebas automáticas.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span><span class="tag">pytest</span></div>
+      </article>
+      <article class="card">
+        <h3>Cerebro de Trading — web + 3D</h3>
+        <p>Guardián de reglas, bitácora desde CSV de Binance y un mapa 3D animado de una base de conocimiento de 600+ notas que se ilumina con cada pregunta.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Canvas</span><span class="tag">FastAPI</span></div>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Psico777/lk-vision">LK VISION</a></h3>
+        <p>Convierte fotos de productos con precios manuscritos en CNY en órdenes Excel/PDF, con calculadora de importación. <a href="https://lkvision.eleka.me">Demo →</a></p>
+        <div class="tags"><span class="tag">Gemini Vision</span><span class="tag">React</span><span class="tag">FastAPI</span></div>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Psico777/proxy-checker-pro">Proxy Checker Pro</a></h3>
+        <p>~20 000 proxies de 30+ fuentes, doble chequeo HTTP/SOCKS, scoring y pool rotacional por API key con dashboard en tiempo real. <a href="https://proxy.eleka.me">Demo →</a></p>
+        <div class="tags"><span class="tag">asyncio</span><span class="tag">WebSockets</span><span class="tag">SaaS</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="thorpi">
+    <p class="ceja">Mascota 3D</p>
+    <h2>Thorpi</h2>
+    <p class="sub">Modelado por código en Blender (Python/bpy) y renderizado con Cycles en GPU en la nube, por menos de US$ 1. Sostiene A♠ + K♥ = 21, en honor a Edward O. Thorp.</p>
+    <div class="acciones">
+      <figure><img src="assets/thorpi-reposo.webp" alt="" loading="lazy" /><figcaption>Muestra el logo</figcaption></figure>
+      <figure><img src="assets/thorpi-procesa.webp" alt="" loading="lazy" /><figcaption>Procesa</figcaption></figure>
+      <figure><img src="assets/thorpi-saluda.webp" alt="" loading="lazy" /><figcaption>Saluda</figcaption></figure>
+      <figure><img src="assets/thorpi-celebra.webp" alt="" loading="lazy" /><figcaption>Celebra</figcaption></figure>
+      <figure><img src="assets/thorpi-alerta.webp" alt="" loading="lazy" /><figcaption>¡Regla rota!</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="stack">
+    <p class="ceja">Stack</p>
+    <h2>Herramientas</h2>
+    <div class="stack">
+      <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Hugging Face</span><span class="tag">PEFT/LoRA</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">llama.cpp</span><span class="tag">LangChain</span><span class="tag">ChromaDB</span>
+      <span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">WebSockets</span><span class="tag">SQL</span>
+      <span class="tag">Numba</span><span class="tag">pandas</span><span class="tag">LightGBM</span><span class="tag">Selenium</span><span class="tag">OCR</span>
+      <span class="tag">GCP</span><span class="tag">Linux/WSL2</span><span class="tag">systemd</span><span class="tag">Raspberry Pi</span><span class="tag">Modal (GPU serverless)</span><span class="tag">Blender/bpy</span>
+    </div>
+    <p class="sub" style="margin-top:16px">Idiomas: español (nativo) · inglés (B2) · chino (básico).</p>
+  </section>
+
+  <footer id="contacto">
+    <span>Yordy Rojas Baldeón · Ingeniería de Sistemas e Informática (UTP)</span>
+    <span><a href="mailto:lastkingpe@gmail.com">lastkingpe@gmail.com</a> · <a href="https://github.com/Psico777">GitHub</a> · <a href="https://linkedin.com/in/yordyrojasb/">LinkedIn</a></span>
+  </footer>
+</div>
+</body>
+</html>

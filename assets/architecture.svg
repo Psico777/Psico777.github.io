@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="THORP-IA architecture">
+  <style>
+    .bg { fill: #0f1720; }
+    .box { fill: #16212c; stroke: #2b3a48; stroke-width: 1.5; }
+    .hl { fill: #102a1e; stroke: #18a463; stroke-width: 2; }
+    .t { fill: #e8eef4; font-size: 15px; font-weight: 600; }
+    .s { fill: #9fb0c0; font-size: 12px; }
+    .k { fill: #18a463; font-size: 12px; font-weight: 600; letter-spacing: .06em; }
+    .a { stroke: #5b7186; stroke-width: 1.6; fill: none; marker-end: url(#m); }
+  </style>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b7186"/></marker></defs>
+  <rect class="bg" width="960" height="430" rx="16"/>
+  <text x="32" y="40" class="k">DATA</text>
+  <text x="352" y="40" class="k">TRAINING &amp; EVALUATION</text>
+  <text x="672" y="40" class="k">SERVING</text>
+
+  <rect class="box" x="32" y="58" width="270" height="74" rx="10"/>
+  <text x="48" y="88" class="t">Knowledge base</text>
+  <text x="48" y="110" class="s">600+ notes · trading rules · lessons</text>
+  <rect class="box" x="32" y="150" width="270" height="74" rx="10"/>
+  <text x="48" y="180" class="t">Tick-level simulator</text>
+  <text x="48" y="202" class="s">strategy decisions + outcomes</text>
+  <rect class="box" x="32" y="242" width="270" height="94" rx="10"/>
+  <text x="48" y="272" class="t">Dataset builder</text>
+  <text x="48" y="294" class="s">8 000+ explain / warn / journal examples</text>
+  <text x="48" y="314" class="s">date split · 0 invented numbers check</text>
+
+  <rect class="hl" x="352" y="58" width="270" height="94" rx="10"/>
+  <text x="368" y="88" class="t">Qwen3-8B + LoRA (r=32)</text>
+  <text x="368" y="110" class="s">PyTorch · PEFT · bf16 · H100 (serverless)</text>
+  <text x="368" y="130" class="s">1 epoch · 25M tokens · resumable</text>
+  <rect class="box" x="352" y="170" width="270" height="94" rx="10"/>
+  <text x="368" y="200" class="t">Blind exam (Aug–Oct)</text>
+  <text x="368" y="222" class="s">907 never-seen questions</text>
+  <text x="368" y="242" class="s">96% decisions · 0% invented numbers</text>
+  <rect class="box" x="352" y="282" width="270" height="54" rx="10"/>
+  <text x="368" y="314" class="t">Merge + GGUF Q4_K_M (llama.cpp)</text>
+
+  <rect class="box" x="672" y="58" width="256" height="74" rx="10"/>
+  <text x="688" y="88" class="t">vLLM on serverless GPU</text>
+  <text x="688" y="110" class="s">scale to zero · multi-LoRA</text>
+  <rect class="box" x="672" y="150" width="256" height="74" rx="10"/>
+  <text x="688" y="180" class="t">Local: Ollama (CPU)</text>
+  <text x="688" y="202" class="s">4.8 GB · runs on a laptop</text>
+  <rect class="hl" x="672" y="242" width="256" height="94" rx="10"/>
+  <text x="688" y="272" class="t">Web: FastAPI + React</text>
+  <text x="688" y="294" class="s">streaming answers · RAG on the</text>
+  <text x="688" y="314" class="s">official fact sheet · Thorpi 3D</text>
+
+  <path class="a" d="M167 132 V148"/><path class="a" d="M167 224 V240"/><path class="a" d="M302 289 H326 V105 H350"/>
+  <path class="a" d="M487 152 V168"/><path class="a" d="M487 264 V280"/>
+  <path class="a" d="M622 105 H670"/><path class="a" d="M622 309 H640 V187 H670"/>
+  <path class="a" d="M800 132 V148"/><path class="a" d="M800 224 V240"/>
+  <text x="32" y="392" class="s">THORP-IA explains, warns and writes the journal. It never decides trades — a small validated model does.</text>
+  <text x="32" y="412" class="s">Code, data, weights and strategy parameters are private.</text>
+</svg>
